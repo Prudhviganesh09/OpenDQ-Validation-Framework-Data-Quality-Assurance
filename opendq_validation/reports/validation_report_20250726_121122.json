@@ -1,0 +1,78 @@
+{
+  "summary": {
+    "total_rules": 6,
+    "passed": 3,
+    "failed": 3,
+    "execution_time": "0:00:00.010768",
+    "timestamp": "2025-07-26 12:11:22",
+    "status": "FAILED",
+    "error": null
+  },
+  "details": [
+    {
+      "rule_name": "email_format_validation",
+      "description": "Email must be in valid format",
+      "passed": false,
+      "failed_count": 1,
+      "severity": "ERROR",
+      "error_details": [
+        {
+          "row_index": 2,
+          "value": "invalid-email",
+          "message": "Value does not match pattern: ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+        }
+      ]
+    },
+    {
+      "rule_name": "dob_not_null_validation",
+      "description": "Date of Birth must be provided",
+      "passed": false,
+      "failed_count": 1,
+      "severity": "ERROR",
+      "error_details": [
+        {
+          "row_index": 3,
+          "message": "Value is null or missing"
+        }
+      ]
+    },
+    {
+      "rule_name": "phone_format_validation",
+      "description": "Phone must be exactly 10 digits",
+      "passed": false,
+      "failed_count": 1,
+      "severity": "ERROR",
+      "error_details": [
+        {
+          "row_index": 8,
+          "value": "invalid-phone",
+          "message": "Value does not match pattern: ^\\d{10}$"
+        }
+      ]
+    },
+    {
+      "rule_name": "name_not_null_validation",
+      "description": "Customer name is required",
+      "passed": true,
+      "failed_count": 0,
+      "severity": "ERROR",
+      "error_details": []
+    },
+    {
+      "rule_name": "customer_id_unique_validation",
+      "description": "Customer ID must be unique",
+      "passed": true,
+      "failed_count": 0,
+      "severity": "ERROR",
+      "error_details": []
+    },
+    {
+      "rule_name": "dob_date_validation",
+      "description": "Date of Birth must be a valid date",
+      "passed": true,
+      "failed_count": 0,
+      "severity": "ERROR",
+      "error_details": []
+    }
+  ]
+}

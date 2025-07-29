@@ -1,0 +1,11 @@
+customer_id,name,email,dob,phone
+1,John Doe,john@example.com,1990-05-15,1234567890
+2,Jane Smith,jane@example.com,1985-08-22,9876543210
+3,Robert Johnson,invalid-email,1978-11-30,5551234567
+4,Emily Davis,emily@example.com,,1234567890
+5,Michael Brown,michael@example.com,1992-03-10,9876543210
+6,Sarah Wilson,sarah@example.com,1988-07-18,1234567890
+7,David Lee,david@example.com,1982-12-05,9876543210
+8,Lisa Garcia,lisa@example.com,1995-09-25,1234567890
+9,James Wilson,james@example.com,1975-04-12,invalid-phone
+10,Jennifer Taylor,jennifer@example.com,1989-06-30,9876543210

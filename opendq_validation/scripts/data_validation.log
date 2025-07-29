@@ -1,0 +1,42 @@
+2025-07-28 09:00:19,752 - __main__ - INFO - Initializing DataValidator with config: ../config/rules/customer_validation_rules.json
+2025-07-28 09:00:19,754 - __main__ - DEBUG - Found 'clean' section in config, using it as main config
+2025-07-28 09:00:19,756 - __main__ - DEBUG - Successfully verified write access to C:\Users\jayak\OneDrive\Desktop\Great Expectations\opendq_validation\scripts\..\..\reports
+2025-07-28 09:00:19,756 - __main__ - INFO - Using reports directory: C:\Users\jayak\OneDrive\Desktop\Great Expectations\opendq_validation\scripts\..\..\reports
+2025-07-28 09:00:19,756 - __main__ - INFO - Loading data from: C:\Users\jayak\OneDrive\Desktop\Great Expectations\opendq_validation\data\sample_customers.csv
+2025-07-28 09:00:19,762 - __main__ - INFO - Successfully loaded 10 rows from C:\Users\jayak\OneDrive\Desktop\Great Expectations\opendq_validation\data\sample_customers.csv
+2025-07-28 09:00:19,763 - __main__ - INFO - Running 6 validation rules
+2025-07-28 09:00:19,764 - __main__ - DEBUG - Processing rule 'email_format_validation' of type 'regex' on column 'email'
+2025-07-28 09:00:19,771 - __main__ - INFO - Validation 'email_format_validation' FAILED
+2025-07-28 09:00:19,776 - __main__ - DEBUG - Processing rule 'dob_not_null_validation' of type 'not_null' on column 'dob'
+2025-07-28 09:00:19,780 - __main__ - INFO - Validation 'dob_not_null_validation' FAILED
+2025-07-28 09:00:19,782 - __main__ - DEBUG - Processing rule 'phone_format_validation' of type 'regex' on column 'phone'
+2025-07-28 09:00:19,787 - __main__ - INFO - Validation 'phone_format_validation' FAILED
+2025-07-28 09:00:19,792 - __main__ - DEBUG - Processing rule 'name_not_null_validation' of type 'not_null' on column 'name'
+2025-07-28 09:00:19,804 - __main__ - INFO - Validation 'name_not_null_validation' PASSED
+2025-07-28 09:00:19,810 - __main__ - DEBUG - Processing rule 'customer_id_unique_validation' of type 'unique' on column 'customer_id'
+2025-07-28 09:00:19,812 - __main__ - INFO - Validation 'customer_id_unique_validation' PASSED
+2025-07-28 09:00:19,813 - __main__ - DEBUG - Processing rule 'dob_date_validation' of type 'date_format' on column 'dob'
+2025-07-28 09:00:19,815 - __main__ - INFO - Validation 'dob_date_validation' PASSED
+2025-07-28 09:00:19,820 - __main__ - INFO - Completed 6 validation rules
+2025-07-28 09:00:19,821 - __main__ - INFO - Attempting to save reports to: C:\Users\jayak\OneDrive\Desktop\Great Expectations\opendq_validation\scripts\..\..\reports
+2025-07-28 09:00:19,825 - __main__ - INFO - Directory exists or was created: C:\Users\jayak\OneDrive\Desktop\Great Expectations\opendq_validation\scripts\..\..\reports
+2025-07-28 09:00:19,833 - __main__ - INFO - JSON report successfully saved to: C:\Users\jayak\OneDrive\Desktop\Great Expectations\opendq_validation\scripts\..\..\reports\validation_report_20250728_090019.json
+2025-07-28 09:00:19,835 - __main__ - INFO - Starting HTML report generation for 6 validation results
+2025-07-28 09:00:19,860 - __main__ - DEBUG - Report stats - Passed: 3, Failed: 3, Total: 6
+2025-07-28 09:00:19,868 - __main__ - DEBUG - Report metadata - Execution Time: None, Timestamp: None
+2025-07-28 09:00:19,870 - __main__ - DEBUG - HTML template generated successfully
+2025-07-28 09:00:19,878 - __main__ - INFO - HTML report successfully saved to: C:\Users\jayak\OneDrive\Desktop\Great Expectations\opendq_validation\scripts\..\..\reports\validation_report_20250728_090019.html
+2025-07-28 09:00:19,879 - __main__ - INFO - Email notification prepared. To: your-email@example.com
+2025-07-28 09:00:19,905 - __main__ - INFO - Body:
+All data validation rules passed successfully.
+
+Validation Summary:
+- Total Rules: 6
+- Passed: 3
+- Failed: 3
+
+Failed Rules:
+- email_format_validation: Email must be in valid format (Failed: 1 rows)
+- dob_not_null_validation: Date of Birth must be provided (Failed: 1 rows)
+- phone_format_validation: Phone must be exactly 10 digits (Failed: 1 rows)
+

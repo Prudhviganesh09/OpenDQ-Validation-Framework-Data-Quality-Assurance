@@ -1,0 +1,70 @@
+{
+  "clean": {
+    "jobName": "customer_data_validation",
+    "description": "Data quality validation for customer records",
+    "dataSource": {
+      "type": "csv",
+      "path": "C:\\Users\\jayak\\OneDrive\\Desktop\\Great Expectations\\opendq_validation\\data\\sample_customers.csv",
+      "hasHeader": true
+    },
+    "validationRules": [
+      {
+        "ruleName": "email_format_validation",
+        "description": "Email must be in valid format",
+        "ruleType": "regex",
+        "columnName": "email",
+        "pattern": "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$",
+        "severity": "ERROR"
+      },
+      {
+        "ruleName": "dob_not_null_validation",
+        "description": "Date of Birth must be provided",
+        "ruleType": "not_null",
+        "columnName": "dob",
+        "severity": "ERROR"
+      },
+      {
+        "ruleName": "phone_format_validation",
+        "description": "Phone must be exactly 10 digits",
+        "ruleType": "regex",
+        "columnName": "phone",
+        "pattern": "^\\d{10}$",
+        "severity": "ERROR"
+      },
+      {
+        "ruleName": "name_not_null_validation",
+        "description": "Customer name is required",
+        "ruleType": "not_null",
+        "columnName": "name",
+        "severity": "ERROR"
+      },
+      {
+        "ruleName": "customer_id_unique_validation",
+        "description": "Customer ID must be unique",
+        "ruleType": "unique",
+        "columnName": "customer_id",
+        "severity": "ERROR"
+      },
+      {
+        "ruleName": "dob_date_validation",
+        "description": "Date of Birth must be a valid date",
+        "ruleType": "date_format",
+        "columnName": "dob",
+        "format": "%Y-%m-%d",
+        "severity": "ERROR"
+      }
+    ],
+    "notifications": {
+      "email": {
+        "enabled": true,
+        "recipients": ["your-email@example.com"],
+        "onSuccess": true,
+        "onFailure": true
+      }
+    },
+    "reporting": {
+      "formats": ["html", "json"],
+      "outputPath": "../../reports/"
+    }
+  }
+}
